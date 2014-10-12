@@ -22,4 +22,12 @@ public class FakeOperator extends JavaPlugin {
 		messages.save();
 	}
 	
+	public FakeopsConfig getFakeopsConfig() {
+		return fakeops;
+	}
+	
+	public MessagesConfig getMessagesConfig() {
+		return messages;
+	}
+	
 }
