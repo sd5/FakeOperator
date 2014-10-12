@@ -2,6 +2,7 @@ package me.sd5.fakeoperator.config;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
@@ -22,6 +23,8 @@ public class Config  {
     public Config(JavaPlugin plugin, String configName) {
     	this.plugin = plugin;
     	this.configName = configName;
+    	reload();
+    	save();
     }
     
     public void reload() {
@@ -31,6 +34,11 @@ public class Config  {
         config = YamlConfiguration.loadConfiguration(configFile);
      
         // Look for defaults in the jar
+        InputStream defConfigStream = plugin.getResource(configName);
+        if(defConfigStream == null) {
+        	return;
+        }
+        
         InputStreamReader defConfigStreamReader = null;
 		try {
 			defConfigStreamReader = new InputStreamReader(plugin.getResource(configName), "UTF8");
