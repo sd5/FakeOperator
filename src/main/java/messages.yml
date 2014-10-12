@@ -1,0 +1,3 @@
+messages:
+  fake-op: "$7$o[CONSOLE: Opped %p]"
+  fake-deop: "$7$o[CONSOLE: De-opped %p]\n$eYou are no longer op!"
