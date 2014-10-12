@@ -4,7 +4,7 @@
   <artifactId>FakeOperator</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <name>FakeOperator</name>
-  <description>Bukkit Plugin</description>
+  <description>Bukkit Plugin - Let your overzealous guests think they got OP.</description>
   
   <build>
     <sourceDirectory>src</sourceDirectory>

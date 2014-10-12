@@ -1,0 +1,5 @@
+name: FakeOperator
+version: 0.0.1
+description: Let your overzealous guests think they got OP.
+author: sd5 (Shaun_das_Schaf)
+main: me.sd5.fakeoperator.FakeOperator
