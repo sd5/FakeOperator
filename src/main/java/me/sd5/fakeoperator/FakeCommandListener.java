@@ -46,7 +46,8 @@ public class FakeCommandListener implements Listener {
 				FakeCommand fakeCommand = fakeCommands.get(command);
 				if(fakeCommand != null) {
 					Bukkit.getLogger().log(Level.INFO, "Fake operator " + player.getName() + " issued fake command: " + fullCommand);
-					player.sendMessage(fakeCommand.onCall(player, args));
+					String message = fakeCommand.onCall(player, args);
+					player.sendMessage((new ColorReplace(message)).getFormattedMessage());
 					event.setCancelled(true);
 				}
 			}
